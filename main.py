@@ -1,8 +1,10 @@
 from decode_ceasar import decode
 from encode_ceasar import encode
 from encode_vigeneur import encode_v
+from decode_vigeneur import decode_v
 from crack import cracker
 from freq import crack_o
+
 ctrl = " "
 ctrl1 = " "
 running = True
@@ -10,7 +12,7 @@ print(" ","\t***!!!WElCOME TO THE SCHIFRE SIMULATOR!!!***\t")
 print(" ","\tHERE U CAN ENCODE OR DECODE\t")
 
 while running:
-    ctrl = str(input(" \tWHAT DO U, WANT TO DO(en, en_v, de, cr1, cro): "))
+    ctrl = str(input(" \tWHAT DO U, WANT TO DO(en, en_v, de, de_v, cr1, cro): "))
 
     if ctrl == "en":
         __str = str(input(" \tPrint the frase to encode: "))
@@ -21,6 +23,11 @@ while running:
         __str = str(input(" \tPrint the frase to encode: "))
         __key = str(input(" \tPrint the key: "))
         encode_v(__str, __key)
+
+    if ctrl == "de_v":
+        __str = str(input(" \tPrint the frase to decode: "))
+        __key = str(input(" \tPrint the key: "))
+        decode_v(__str, __key)
 
     if ctrl == "de":
         __str = str(input(" \tPrint the frase to decode: "))
